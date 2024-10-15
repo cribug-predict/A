@@ -15,17 +15,7 @@ import redis
 from io import StringIO
 import datetime as dt
 
-ip="192.168.0.182"
-# ip="trade.fenshen.top"
-client = pymongo.MongoClient(f"mongodb://{ip}:27017")
-database = client.trade
-database_predict=client.predict
-collection = database["stockInfo"]
-collection_low=database_predict["low"]
-r = redis.Redis(host=ip, port=6379, db=0)
-redisOrder = redis.Redis(host=ip, port=6380, db=0)
 root="D:/emdata/"
-
 desktop="D:/emdata/工作台/"
 newdesktop="D:/emdata/new工作台/"
 server="D:/emdata/server/"
@@ -36,10 +26,6 @@ allindustry_sub_with_singleindustryFilename="allindustry_sub_with_singleindustry
 allBankFiltered="allBankFiltered"
 allBankFiltered1="allBankFiltered1"
 ipMap={}
-ts.set_token(token)
-pro=ts.pro_api(token=token,timeout=10)
-pro = ts.pro_api('20240522230128-db8cd85d-86c3-439d-8f6b-d4189976bfde')
-pro._DataApi__http_url = 'http://tsapi.majors.ltd:7000'
 
 codeToDrop=["酒店","餐饮","人工景点","旅游综合","自然景点","石油加工",
                 "油品石化贸易","商用载货车","商用载客车","乘用车",
