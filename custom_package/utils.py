@@ -9,7 +9,6 @@ import sys
 import akshare as ak
 import numpy as np
 import pyttsx3
-import pymongo
 import json
 import tushare as ts
 import redis
@@ -30,7 +29,6 @@ root="D:/emdata/"
 desktop="D:/emdata/工作台/"
 newdesktop="D:/emdata/new工作台/"
 server="D:/emdata/server/"
-token="b97645ec0240cfe7acd56dd7bec6107b2bb6d848c872fdad4b91b7fb"
 start=[]
 core=12
 timer=True
