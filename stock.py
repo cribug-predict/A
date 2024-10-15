@@ -1,9 +1,10 @@
 from AI_market_open.stock_all import predict
 from custom_package import utils
 import pandas as pd
+import os
 
 def calculate(offset=0):
-  utils.collection.delete_one(filter={"filename":"predict"})
+  os.remove("stock.csv")
   dflist=pd.read_csv("list.csv",dtype={"code":str})
   indexToDrop=[]
   dflist=dflist.drop(index=indexToDrop)
