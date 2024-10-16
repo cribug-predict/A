@@ -4,8 +4,11 @@ import pandas as pd
 import os
 
 def calculate(offset=0):
-  os.remove("stock.csv")
-  dflist=pd.read_csv("list.csv",dtype={"code":str})
+  try:
+    os.remove("stock.csv")
+  except:
+    pass
+  dflist=pd.read_csv("dflist.csv",dtype={"code":str})
   indexToDrop=[]
   dflist=dflist.drop(index=indexToDrop)
   in_sub="轨交设备"
